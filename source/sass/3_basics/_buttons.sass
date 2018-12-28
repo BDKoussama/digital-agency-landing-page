@@ -1,0 +1,38 @@
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"]
+  display: inline-block
+  color: $black
+  font-size: 12px
+  font-weight: 600
+  padding: 0.3em 1.4em
+  text-transform: uppercase
+  letter-spacing: 0.08em
+  text-decoration: none
+  white-space: nowrap
+  cursor: pointer
+  border: 2px solid $black
+  box-sizing: border-box
+  z-index: 1 !important
+  transition: all 0.5s ease-in-out
+  position: relative
+  &::before
+    content: ''
+    display: block
+    height: 0%
+    width: 100%
+    transition: height 0.5s ease-in-out
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: -1
+    background: $black
+  &:hover,
+  &:active,
+  &:focus
+    outline: 0
+    color: $white
+    &::before
+      height: 100%
