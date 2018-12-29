@@ -551,8 +551,8 @@ header {
 .grid-item__layer {
   height: 100%;
   width: 100%;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
   position: absolute;
