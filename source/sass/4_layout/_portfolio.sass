@@ -1,0 +1,44 @@
+.portfolio
+    width: 100%
+    padding: 5rem 0 
+    background: $white
+    text-align: center
+.grid
+    margin-top: 3.6rem
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-item 
+  width: 33.333%
+
+.grid-item__layer
+    height: 100%
+    width: 100%
+    transform: translateX(-100%)
+    transition: all 0.6s ease-in-out
+    position: absolute
+    background: $mainColor
+    top: 0
+
+.grid-item 
+  overflow: hidden
+  float: left 
+  position: relative
+  &:hover
+      .grid-item__layer
+        transform: translateX(0)
+
+.grid-item img 
+  display: block
+  max-width: 100%
+
+@media screen and (max-width: 850)
+  .grid-sizer,.grid-item 
+    width: 45%
+    margin: 0 auto 
+  
+@media screen and (max-width: 750px)
+  .grid-sizer,.grid-item 
+    width: 100%
+  .grid-item
+      margin: 0 auto
+  

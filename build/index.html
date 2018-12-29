@@ -5,29 +5,182 @@
     <title>beCreative.</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <link rel="stylesheet" href="assets/css/main.css" />
 
 </head>
 
 <body>
+    <!-- header-->
+    <header>
         <div class="wrapper">
-            <header>
-                <nav class="nav-bar">
-                    <div><h4 class="brand">beCreative.</h4></div>
-                    <ul class="nav-bar_list">
-                        <li class="navbar-item"><a href="#">Home</a></li>
-                        <li class="navbar-item"><a href="#">About</a></li>
-                        <li class="navbar-item"><a href="#">Testimonials</a></li>
-                        <li class="navbar-item"><a href="#">Pricing</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <!--navbar-->
+            <nav class="nav-bar">
+                <div>
+                    <h4 class="brand">beCreative.</h4>
+                </div>
+                <ul class="nav-bar_list">
+                    <li class="navbar-item"><a href="#">Home</a></li>
+                    <li class="navbar-item"><a href="#">About</a></li>
+                    <li class="navbar-item"><a href="#">Testimonials</a></li>
+                    <li class="navbar-item"><a href="#">Pricing</a></li>
+                </ul>
+            </nav>
+            <!--close navbar-->
         </div>
-        <div class="container">
+    </header>
+    <!--close header-->
+    <div class="container">
+        <section class="home">
             <div class="wrapper">
+                <div class="hero">
+                    <div class="hello"></div>
+                    <div class="hero-intro">
+                        <h2>We Craft Awesome Web And <br>
+                            Graphic Design Solutions</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="wrapper">
+                <div class="about-intro">
+                    <div class="section-title_wrapper">
+                        <h2 class="section-title">About Us</h2>
+                    </div>
+                    <div class="about-description">
+                        <p>Excepteur enim magna veniam labore veniam sint. Ex aliqua esse proident ullamco voluptate.
+                            Nisi nisi nisi aliqua eiusmod dolor dolor proident deserunt occaecat elit Lorem
+                            reprehenderit. Id culpa veniam ex aliqua magna elit pariatur do nulla. Excepteur enim magna
+                            veniam labore veniam sint.</p>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="features-row">
+                        <div class="feature-item">
+                            <div class="feature-icon"></div>
+                            <h3 class="feature-title">Fully Responsive</h3>
+                            <div class="feature-description">
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                    veritatis
+                                    et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                    quia voluptas sit aspernatur aut odit aut fugit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"></div>
+                            <h3 class="feature-title">Clean Code</h3>
+                            <div class="feature-description">
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                    veritatis
+                                    et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                    quia voluptas sit aspernatur aut odit aut fugit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"></div>
+                            <h3 class="feature-title">Support</h3>
+                            <div class="feature-description">
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                    veritatis
+                                    et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                    quia voluptas sit aspernatur aut odit aut fugit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-row">
+                        <div class="feature-item">
+                            <div class="feature-icon"></div>
+                            <h3 class="feature-title">Marketing</h3>
+                            <div class="feature-description">
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                    veritatis
+                                    et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                    quia voluptas sit aspernatur aut odit aut fugit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"></div>
+                            <h3 class="feature-title">Design</h3>
+                            <div class="feature-description">
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                    veritatis
+                                    et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                    quia voluptas sit aspernatur aut odit aut fugit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"></div>
+                            <h3 class="feature-title">Portfolio</h3>
+                            <div class="feature-description">
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                    veritatis
+                                    et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                    quia voluptas sit aspernatur aut odit aut fugit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <div class="wrapper">
+                <div class="section-title_wrapper">
+                    <h2 class="section-title section-title--center">Portfolio</h2>
+                </div>
+
+                <div class="grid">
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item">
+                       <a href="#"> <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" /> <div class="grid-item__layer"></div></a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+                    </div>
+
+                </div>
 
             </div>
-        </div>
+        </section>
+    </div>
+    <footer class="footer"></footer>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/bundle.js"></script>
 </body>
