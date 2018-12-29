@@ -514,7 +514,8 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  padding: 0 0.5em; }
 
 .feature-item {
   width: 100%;
@@ -581,6 +582,11 @@ header {
     width: 100%; }
   .grid-item {
     margin: 0 auto; } }
+
+.feedback {
+  height: 100vh;
+  width: 100%;
+  background: #fff; }
 
 .flex-video {
   height: 0;
