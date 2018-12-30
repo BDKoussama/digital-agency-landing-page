@@ -1,0 +1,45 @@
+.pricing
+    background: white
+    width: 100%
+    text-align: center
+    padding: 5rem
+    .grid-layout
+        grid-gap: 1rem
+.pricing-info
+    margin: 2rem
+.pack-card
+    width: 100%
+    height: 100%
+    margin: 1em auto 
+    background: #fbfbfb
+.pack-type
+    color: $black
+    text-transform: uppercase
+    margin: 0
+    padding: 1rem
+.price-wrapper
+    padding: 1em
+    &::after 
+        content: ''
+        display: block 
+        height: 1px 
+        width: 70%
+        background: #f2f2f2
+        margin: 0 auto 
+
+.price
+    color: $black
+    margin: 0.2em
+    position: relative
+    display: inline-block
+    &::before
+        content: '$' 
+        display: block 
+        position: absolute
+        top: 0
+        left: -40% 
+        font-size: 25px
+.pack-options
+    margin-bottom: 2em
+    li 
+        padding: 0.5em 0

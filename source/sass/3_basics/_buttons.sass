@@ -18,22 +18,25 @@ input[type="button"]
   z-index: 1 !important
   transition: all 0.3s ease-in-out
   position: relative
-  &::before
-    content: ''
-    display: block
-    height: 0%
-    width: 100%
-    transition: height 0.5s ease-in-out
-    position: absolute
-    bottom: 0
-    left: 0
-    z-index: -1
-    background: $black
   &:hover,
   &:active,
   &:focus
     outline: 0
     border: 2px solid $white
     color: $white
-    &::before
-      height: 100%
+
+.button-inverse
+    color: $black
+    border: 1px solid $black
+    font-size: 12px
+    font-weight: 600
+    padding: 1em 2em
+    text-transform: uppercase
+    letter-spacing: 0.08em
+    text-decoration: none
+    white-space: nowrap
+    cursor: pointer
+    transition: all 0.3s ease-in-out
+    &:hover
+      border: 2px solid $black
+      color: $black
