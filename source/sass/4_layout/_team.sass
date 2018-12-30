@@ -1,5 +1,4 @@
 .team
-    //height: 100vh
     width: 100%
     background: $mainColor
     padding: 5rem
@@ -8,17 +7,16 @@
         color: $white
         &::after
             background: $black
-.heroes
+.team-hero
+    height: 300Px
     width: 100%
+    position: relative 
+    &:hover
+        .team-hero__layer
+            background: $black
+.team-hero__layer
     height: 100%
-    border: 1px solid red 
-    margin-top: 2.5rem
-.row
-    display: flex
-    flex-direction: row 
-    justify-content: space-between
-    flex-wrap: wrap
-.groupe-member
     width: 100%
-    display: flex
-    border: 1px solid black
+    background: transparent
+    transition: all 0.3s ease-in-out 
+    position: absolute
