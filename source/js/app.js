@@ -13,3 +13,7 @@ imagesLoaded( grid ).on( 'progress', function() {
   // layout Masonry after each image loads
   msnry.layout();
 });
+
+const heroes = document.querySelectorAll('.team-hero');
+
+heroes.forEach(hero => hero.addEventListener('click' , () => hero.classList.toggle('toggle-hero')));

@@ -496,6 +496,9 @@ header {
   height: 350Px;
   padding: 1em; }
 
+.feature-description {
+  text-align: justify; }
+
 .feature-icon {
   height: 45px;
   width: 45px;
@@ -530,7 +533,8 @@ header {
           align-items: center;
   padding: 0 3rem; }
   .footer p {
-    margin: 0; }
+    margin: 0;
+    font-size: 0.61rem; }
 
 .social-media li {
   display: inline-block;
@@ -630,6 +634,7 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-size: 80px;
     height: 0;
+    color: #ff1e5c;
     margin-bottom: 3.6rem;
     line-height: 100%;
     font-weight: 700;
@@ -666,7 +671,7 @@ header {
   width: 100%;
   background: #fff;
   text-align: center;
-  padding: 5rem; }
+  padding: 5rem 0; }
 
 .brand-item {
   width: 100%;
@@ -703,33 +708,73 @@ header {
 .team {
   width: 100%;
   background: #ff1e5c;
-  padding: 5rem;
   text-align: center; }
   .team .section-title {
     color: #fff; }
     .team .section-title::after {
       background: #1b1b1b; }
 
-.team-hero {
-  height: 300Px;
+.team-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  position: relative; }
-  .team-hero:hover .team-hero__layer {
-    background: #1b1b1b; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
 
-.team-hero__layer {
+.team-hero {
+  height: 400px;
+  overflow: hidden;
+  display: inline-block;
+  min-width: 0;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative; }
+
+.team-hero__img {
   height: 100%;
-  width: 100%;
-  background: transparent;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  position: absolute; }
+  cursor: pointer; }
+
+.toggle-hero {
+  min-width: 100%; }
+  .toggle-hero .test {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+
+.hero-position,
+.hero-name {
+  color: #1b1b1b;
+  position: absolute;
+  top: 50%;
+  overflow: hidden;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 999 !important; }
+  .hero-position h3,
+  .hero-name h3 {
+    color: #1b1b1b;
+    margin: 0;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transform: translateY(101%);
+            transform: translateY(101%); }
+
+.hero-position {
+  right: 15%; }
+
+.hero-name {
+  left: 15%; }
 
 .pricing {
   background: white;
   width: 100%;
   text-align: center;
-  padding: 5rem; }
+  padding: 5rem 0; }
   .pricing .grid-layout {
     grid-gap: 1rem; }
 

@@ -1,22 +1,47 @@
 .team
     width: 100%
     background: $mainColor
-    padding: 5rem
+    //padding: 5rem
     text-align: center
     .section-title
         color: $white
         &::after
             background: $black
+.team-wrapper
+    display: flex
+    width: 100%
+    flex-direction: row
 .team-hero
-    height: 300Px
-    width: 100%
-    position: relative 
-    &:hover
-        .team-hero__layer
-            background: $black
-.team-hero__layer
+    height: 400px
+    overflow: hidden
+    display: inline-block
+    min-width: 0
+    transition: all 0.8s ease-in-out
+    flex: 1 
+    position: relative
+.team-hero__img
     height: 100%
-    width: 100%
-    background: transparent
-    transition: all 0.3s ease-in-out 
+    cursor: pointer
+.toggle-hero
+    min-width: 100%
+    .test
+        transform: translateX(0)
+.hero-position,
+.hero-name
+    color: $black
     position: absolute
+    top: 50%
+    overflow: hidden
+    transform: translateY(-50%)
+    z-index: 999 !important
+    h3 
+        color: $black
+        margin: 0
+        transition: all 1s ease-in-out
+        transform: translateY(101%)
+.hero-position
+    right: 15%
+.hero-name
+    left: 15%
+
+
