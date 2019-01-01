@@ -728,47 +728,40 @@ header {
   height: 400px;
   overflow: hidden;
   display: inline-block;
-  min-width: 0;
-  -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
+  min-width: 0%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  z-index: 10;
   position: relative; }
 
 .team-hero__img {
   height: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 999 !important; }
 
-.toggle-hero {
-  min-width: 100%; }
-  .toggle-hero .test {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
-
-.hero-position,
-.hero-name {
+.hero-position__wrapper,
+.hero-name__wrapper {
   color: #1b1b1b;
   position: absolute;
   top: 50%;
   overflow: hidden;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  z-index: 999 !important; }
-  .hero-position h3,
-  .hero-name h3 {
-    color: #1b1b1b;
-    margin: 0;
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-    -webkit-transform: translateY(101%);
-            transform: translateY(101%); }
+          transform: translateY(-50%); }
 
-.hero-position {
+.hero-position__wrapper {
   right: 15%; }
 
-.hero-name {
+.hero-name__wrapper {
   left: 15%; }
+
+.hero-info {
+  color: #1b1b1b;
+  margin: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%); }
 
 .pricing {
   background: white;
