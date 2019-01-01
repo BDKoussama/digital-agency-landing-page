@@ -243,6 +243,19 @@ li {
   .section-title--center::after {
     left: calc(50% - 30px); }
 
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none; }
+
+.icon {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  fill: #1b1b1b; }
+
 .button,
 button,
 input[type="submit"],
@@ -501,8 +514,7 @@ header {
 
 .feature-icon {
   height: 45px;
-  width: 45px;
-  background: #ff1e5c; }
+  width: 45px; }
 
 .feature-title {
   color: #1b1b1b; }
@@ -691,19 +703,35 @@ header {
           align-items: center;
   position: relative; }
   .brand-item:hover .brand-layer {
-    background: #1b1b1b; }
+    opacity: 1; }
 
 .brand-layer {
   height: 100%;
   width: 100%;
+  background: #1b1b1b;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  position: absolute; }
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .brand-logo {
-  height: 60px;
-  width: 60px;
-  background: #ff1e5c; }
+  width: 100%; }
+
+.brand-title {
+  text-transform: capitalize; }
 
 .team {
   width: 100%;

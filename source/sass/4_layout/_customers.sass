@@ -13,15 +13,21 @@
     position: relative
     &:hover
         .brand-layer
-            background: $black
+            opacity: 1
 .brand-layer
     height: 100%
     width: 100%
-    background: 
+    background: $black
     transition: all 0.3s ease-in-out 
     position: absolute
+    display: flex
+    opacity: 0
+    flex-direction: row 
+    justify-content: center
+    align-items: center
     
 .brand-logo
-    height: 60px 
-    width: 60px 
-    background: $mainColor
+    width: 100% 
+.brand-title
+    text-transform: capitalize
+    
