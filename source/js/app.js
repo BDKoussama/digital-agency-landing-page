@@ -1,43 +1,12 @@
 import { TimelineLite , TweenMax , Power2} from 'gsap' // or import TweenMax from 'gsap/TweenMax'
 
-// external js: masonry.pkgd.js, imagesloaded.pkgd.js
-
-// init Masonry
 const grid = document.querySelector('.grid');
-
-let msnry = new Masonry( grid, {
-  itemSelector: '.grid-item',
-  columnWidth: '.grid-sizer',
-  percentPosition: true
-});
-
-imagesLoaded( grid ).on( 'progress', function() {
-  // layout Masonry after each image loads
-  msnry.layout();
-});
-
 // sticky nav section
 const nav = document.querySelector('.nav-bar');
 const navTop = nav.offsetTop;
 const menuBtn = document.querySelector('.toggle-menu');
 const menu = document.querySelector('.mobile-menu');
-let menuToggled = false ;
-
-const toggleMenuOnMobileSize = (e) => {
-    e.preventDefault();
-    menu.classList.toggle('show-menu');
-    menuBtn.children[0].innerHTML = menuToggled  ? 'Menu' : 'Close' ; 
-    menuToggled = !menuToggled;
-}
-
-const stickyNavigation = () => {
-  window.scrollY == 0 ? nav.classList.remove('toggle-nav') : nav.classList.add('toggle-nav'); 
-}
-
-window.addEventListener('scroll', stickyNavigation);
-menuBtn.addEventListener('click' , (e) => toggleMenuOnMobileSize(e))
-
-// ScrollReveal Section
+// ScrollReveal settings
 const slideUp = {
   distance: '50%',
   origin: 'bottom',
@@ -50,12 +19,7 @@ const slideDown = {
   duration: 800,
   easing: 'ease-in-out' 
 };
-
-window.sr = ScrollReveal();
-sr.reveal('.feature-item', slideUp , 350);
-sr.reveal('.section-title' , slideUp);
-sr.reveal('.brand-item', slideUp , 350);
-sr.reveal('.pack-card', slideUp , 350);
+let menuToggled = false ;
 
 // flex panels section
  class PanelsFlex{
@@ -101,5 +65,41 @@ sr.reveal('.pack-card', slideUp , 350);
       !this.isAnimating ? this.show() : this.hide();
     }
  } 
- 
+
+
+const toggleMenuOnMobileSize = (e) => {
+    e.preventDefault();
+    menu.classList.toggle('show-menu');
+    menuBtn.children[0].innerHTML = menuToggled  ? 'Menu' : 'Close' ; 
+    menuToggled = !menuToggled;
+}
+
+const stickyNavigation = () => {
+  window.scrollY == 0 ? nav.classList.remove('toggle-nav') : nav.classList.add('toggle-nav'); 
+}
+
+// Bind Events
+window.addEventListener('scroll', stickyNavigation);
+menuBtn.addEventListener('click' , (e) => toggleMenuOnMobileSize(e))
+
+// ScrollReveal Section
+window.sr = ScrollReveal();
+sr.reveal('.feature-item', slideUp , 350);
+sr.reveal('.section-title' , slideUp);
+sr.reveal('.brand-item', slideUp , 350);
+sr.reveal('.pack-card', slideUp , 350);
+
+ // init panels
  const panels = new PanelsFlex(document.querySelector('.team-wrapper'));
+
+// init Masonry
+ let msnry = new Masonry( grid, {
+  itemSelector: '.grid-item',
+  columnWidth: '.grid-sizer',
+  percentPosition: true
+});
+
+imagesLoaded( grid ).on( 'progress', function() {
+  // layout Masonry after each image loads
+  msnry.layout();
+});
