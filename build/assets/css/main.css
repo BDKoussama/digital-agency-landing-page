@@ -184,7 +184,8 @@ th {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 *,
 *:before,
@@ -439,12 +440,17 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0 1em;
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+
+.toggle-nav {
+  background: #000; }
 
 .brand {
   margin: 0; }
@@ -468,6 +474,39 @@ header {
       bottom: 0; }
     .nav-bar_list .navbar-item:hover::after {
       width: 100%; }
+
+.toggle-menu {
+  display: none;
+  z-index: 9999 !important; }
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  background: #000;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  display: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  padding: 1.5em; }
+  .mobile-menu .nav-bar_list li {
+    margin: 0.5em;
+    display: block; }
+
+.show-menu {
+  display: block;
+  opacity: 1;
+  z-index: 999  !important; }
+  .show-menu .nav-bar_list {
+    display: inline-block; }
+
+@media screen and (max-width: 750px) {
+  .nav-bar_list {
+    display: none; }
+  .toggle-menu {
+    display: block; } }
 
 .hero {
   height: 100vh;
@@ -914,7 +953,8 @@ header {
   height: 90vh;
   padding: 3rem 0;
   background: #1b1b1b;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
 
 .contact-wrapper {
   display: -webkit-box;
@@ -940,6 +980,33 @@ header {
 .tag {
   color: #ff1e5c;
   margin: 0; }
+
+.top-icon {
+  height: 50px;
+  width: 50px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 10%; }
+  .top-icon:hover {
+    background: #ff1e5c; }
 
 .str-color {
   color: #fff; }

@@ -4,6 +4,7 @@
     padding: 3rem 0
     background: $black
     text-align: center
+    position: relative
 .contact-wrapper
     display: flex
     height: 80vh
@@ -17,7 +18,22 @@
 .tag
     color: $mainColor
     margin: 0
-
+.top-icon
+    height: 50px
+    width: 50px
+    transform: rotate(90deg)
+    background: #000
+    display: flex
+    flex-direction: column 
+    justify-content: center
+    align-items: center
+    transition: all 0.5s ease-in-out
+    position: absolute
+    top: 50%
+    right: 10%
+    &:hover
+        background: $mainColor
+    
 .str-color
     color: $white 
 
