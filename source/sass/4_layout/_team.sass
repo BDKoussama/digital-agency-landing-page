@@ -1,7 +1,6 @@
 .team
     width: 100%
     background: $mainColor
-    //padding: 5rem
     text-align: center
     .section-title
         color: $white
@@ -13,16 +12,16 @@
     flex-direction: row
 .team-hero
     height: 400px
+    width: 100%
     overflow: hidden
     display: inline-block
     min-width: 0%
     flex: 1 
     z-index: 10
     position: relative
-.team-hero__img
-    height: 100%
+    background-position: center
+    background-repeat: no-repeat
     cursor: pointer
-    z-index: 999 !important
 .hero-position__wrapper,
 .hero-name__wrapper
     color: $black
@@ -35,10 +34,19 @@
 .hero-name__wrapper
     left: 15%
 .hero-info
-    color: $black
     margin: 0
     transition: all 1s ease-in-out
     transform: translateY(101%)
+@media screen and (max-width: 750px)
+    .hero-position__wrapper,
+    .hero-name__wrapper
+        left: 50%
+        right: auto 
+        transform: translateX(-50%)
+    .hero-position__wrapper
+        top: 58%
+
+    
 
 
 

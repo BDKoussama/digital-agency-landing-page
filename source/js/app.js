@@ -77,7 +77,7 @@ sr.reveal('.pack-card', slideUp , 350);
       this.el.heroInfo = Array.from(this.el.hero.querySelectorAll('.hero-info'));
       this.tl = new TimelineLite({paused : true});
       this.tl.pause();
-      this.tl.add( TweenMax.fromTo( this.el.hero , 1 , { minWidth : '0%' } , { minWidth : '100%' , ease:  Power2.easeInOut } ));
+      this.tl.add( TweenMax.fromTo( this.el.hero , 1 , { minWidth : '0%' , backgroundRepeat : 'no-repeat' , backgroundPosition: 'center' } , { minWidth : '100%' , backgroundRepeat : 'no-repeat' , backgroundPosition: 'center', ease:  Power2.easeInOut } ));
       this.tl.add( TweenMax.fromTo( this.el.heroInfo , 0.1 , { y : '100%' } , { y : '0%' }  ), "+=0.1");
       this.init();
     }
@@ -86,7 +86,7 @@ sr.reveal('.pack-card', slideUp , 350);
        this.bindEvents();
     }
     bindEvents(){
-      this.el.img.addEventListener('click' , () => this.toggle());
+      this.el.hero.addEventListener('click' , () => this.toggle());
     }
 
     show(){
