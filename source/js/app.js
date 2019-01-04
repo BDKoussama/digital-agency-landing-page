@@ -142,11 +142,9 @@ class Carousel {
     console.log(newPosition)
     this.changePost(newPost, newPosition);
 }
-
 // change new slide 
 changePost(newPost, newPosition) {
         newPost.classList.add('active-slide');
-        console.log(this.currentSlide)
         this.currentSlide.classList.remove('active-slide');
         this.currentSlide = newPost;
         this.isAnimating = false;

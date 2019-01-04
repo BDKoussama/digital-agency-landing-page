@@ -666,6 +666,16 @@ header {
   width: 15px;
   margin: 0 0.5em; }
 
+@media screen and (max-width: 750px) {
+  .footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .social-media {
+    padding-bottom: 1em; } }
+
 .portfolio {
   width: 100%;
   padding: 5rem 0;
@@ -769,6 +779,9 @@ header {
 .client-testimonial {
   height: 120px;
   width: 120px;
+  display: inline-block;
+  background-position: 50% 50%;
+  background-size: cover;
   border-radius: 50%;
   margin: 1rem auto; }
 
