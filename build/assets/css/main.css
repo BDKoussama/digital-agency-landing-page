@@ -738,8 +738,7 @@ header {
     margin: 0 auto; } }
 
 .feedback {
-  width: 100%;
-  height: 100vh; }
+  width: 100%; }
 
 .testimonials {
   padding: 5rem 0;
@@ -821,6 +820,12 @@ header {
 
 .active-slide {
   opacity: 1; }
+
+@media screen and (max-width: 750px) {
+  .testimonial-wrapper {
+    height: 80vh; }
+  .testimonial {
+    width: 100%; } }
 
 .customers {
   width: 100%;
